@@ -7,10 +7,12 @@ import statistics
 
 budget_csv = os.path.join("Resources","budget_data.csv")
 
+
 def Financial_Analysis(Budget_data):
      
     date = str(Budget_data[0])
     profit_losses = int(Budget_data[1])
+
 
     total_months = len(date)
     total = sum(profit_losses)
@@ -22,13 +24,17 @@ def Financial_Analysis(Budget_data):
 
      csvreader = csv.reader(csvfile, delimiter=',')
 
-    print(csvreader)
 
     csv_header = next(csvreader)
 
+    for row in csvreader:
+       Total_Months = len(list(csvreader))
+       Total = int(row[1])
+       print(Total_Months)
+       print(Total)
+
    
-    Total_Months = len(list(csvreader))
-    print(Total_Months)
+  
    
 
  
