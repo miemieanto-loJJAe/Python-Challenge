@@ -5,4 +5,16 @@ import csv
 #import statistics
 import statistics
 
-budget_data = os.path.join('..','PyBank','Resources','budget_data.csv')
+#showing where the data is
+budget_data = os.path.join('Resources','budget_data.csv')
+
+
+Total_Months = 0
+Total = 0
+
+with open(budget_data) as csvfile:
+
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    print(csvreader)
+
