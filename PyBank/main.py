@@ -2,7 +2,7 @@ import os
 
 import csv
 
-csvpath = os.path.join('..', 'Resources', 'budget_data.csv')
+csvpath = os.path.join("Resources","budget_data.csv")
 
 with open(csvpath) as csvfile:
 
@@ -11,3 +11,7 @@ with open(csvpath) as csvfile:
     print(csvreader)
 
     csv_header = next(csvreader)
+
+    Total_Months = len(list(csvreader))
+    print(Total_Months)
+    print
