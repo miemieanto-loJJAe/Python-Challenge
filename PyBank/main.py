@@ -25,7 +25,10 @@ with open(budget_data) as csvfile:
 
     print(Total_Months)
 
-    Total = Total + int(row[2])
+    Total = Total + int(row[1])
+    print(Total)
+    
+
 
 
 
