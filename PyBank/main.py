@@ -14,4 +14,6 @@ with open(csvpath) as csvfile:
 
     Total_Months = len(list(csvreader))
     print(Total_Months)
-    print
+    
+    Total = sum(int(r['Value']) for r in csv.DictReader(csvfile))
+    print(Total)
