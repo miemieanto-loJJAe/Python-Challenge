@@ -17,3 +17,5 @@ with open(budget_data) as csvfile:
     for row in csvreader:
         Total_Months += 1
 print(Total_Months)
+
+Total += int(row[1])
