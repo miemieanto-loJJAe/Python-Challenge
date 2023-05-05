@@ -9,14 +9,13 @@ Total_Months = 0
 Total = 0
 
 with open(budget_data) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',')
-    csvheader = next(csvreader)
 
-    print(csvreader)
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    header = next(csvreader)
+
 #going to create a loop
     for row in csvreader:
         Total_Months += 1
-print(Total_Months)
+        Total += int(row[1])
 
-Total += int(row[1])
-print(Total)
