@@ -20,9 +20,9 @@ with open(budget_data) as csvfile:
     print(csvreader)
 
     csv_header = next(csvreader)
-
+    
+    Total = 0
+ 
     for row in csvreader:
-    Total += int(row[1])
+        Total += int(row[1])
     print(Total)
-
-
