@@ -2,6 +2,7 @@ import os
 import csv
 import statistics
 
+#csv path
 budget_data = os.path.join('Resources','budget_data.csv')
 
 #listing variables
@@ -12,13 +13,19 @@ Biggest_Decrease = 0
 Highest_Month = ''
 Lowest_Month = ''
 
+Difference = []
+Monthly_Difference = []
+
+
+
+#open csv file
 with open(budget_data) as csvfile:
 
     csvreader = csv.reader(csvfile, delimiter=',')
 
     header = next(csvreader)
 
-#going to create a loop
+#going to create a loop for biggest increase and decrease
     for row in csvreader:
         Total_Months += 1
         Total += int(row[1])
@@ -28,5 +35,9 @@ with open(budget_data) as csvfile:
         elif int(row[1]) > Biggest_Increase:
             Biggest_Increase = int(row[1])
             Highest_Month = (row[0])
-    print(Biggest_Decrease)
+
+    DifferenceForMonth= (Difference[i+1] - Difference[i])
+    Monthly_Difference.append(DifferenceForMonth)
+
+  
 
