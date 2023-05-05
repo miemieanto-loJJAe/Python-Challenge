@@ -36,8 +36,11 @@ with open(budget_data) as csvfile:
             Biggest_Increase = int(row[1])
             Highest_Month = (row[0])
 
-    DifferenceForMonth= (Difference[i+1] - Difference[i])
-    Monthly_Difference.append(DifferenceForMonth)
+    for i in range(len(Difference)-1): 
+        DifferenceForMonth= (Difference[i+1] - Difference[i])
+        Monthly_Difference.append(DifferenceForMonth)
+
+    Average_Difference = statistics.mean(Monthly_Difference)
 
   
 
