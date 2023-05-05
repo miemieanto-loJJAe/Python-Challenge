@@ -14,6 +14,7 @@ Total = 0
 # setting change as veriable so i can use it later
 change = []
 
+
 with open(budget_data) as csvfile:
 
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -26,6 +27,9 @@ with open(budget_data) as csvfile:
         Total_Months += 1
 
     print(Total_Months)
+
+    Total_Months.append(row[0])
+    Total.append(int(row[1]))
 
     Total += int(row[1])
     print(Total)
