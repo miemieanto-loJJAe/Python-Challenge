@@ -11,6 +11,8 @@ budget_data = os.path.join('Resources','budget_data.csv')
 Total_Months = 0
 Total = 0
 
+# setting change as veriable so i can use it later
+change = []
 
 with open(budget_data) as csvfile:
 
@@ -26,8 +28,9 @@ with open(budget_data) as csvfile:
     print(Total_Months)
 
     Total = Total + int(row[1])
-    print(Total)
-    
+    print(str(Total))
+
+
 
 
 
