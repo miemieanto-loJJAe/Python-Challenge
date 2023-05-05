@@ -22,10 +22,10 @@ with open(budget_data) as csvfile:
     for row in csvreader:
         Total_Months += 1
         Total += int(row[1])
-        if int(row[1]) < Biggest_Decrease
+        if int(row[1]) < Biggest_Decrease:
             Biggest_Decrease = int(row[1])
             Lowest_Month = (row[0])
-        elif int(row[1]) > Biggest_Increase
+        elif int(row[1]) > Biggest_Increase:
             Biggest_Increase = int(row[1])
             Highest_Month = (row[0])
     print(Biggest_Decrease)
