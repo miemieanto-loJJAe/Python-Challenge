@@ -44,4 +44,12 @@ with open(budget_data) as csvfile:
     Average_Difference = statistics.mean(Monthly_Difference)
 
   
+    print("Financial Analysis")
+    print('____________________')
+    print(f"Total Months: {Total_Months}")
+    print(f"Total: ${Total}")
+    print(f"Average Change: ${Average_Difference}")
+    print(f"Greatest Increase in Profits: {Lowest_Month}, {Biggest_Increase}")
+    print(f"Greatest Decrease in Profits: {Highest_Month}, {Biggest_Decrease}")
+
 
