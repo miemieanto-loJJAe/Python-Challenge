@@ -35,6 +35,7 @@ with open(budget_data) as csvfile:
         elif int(row[1]) > Biggest_Increase:
             Biggest_Increase = int(row[1])
             Highest_Month = (row[0])
+        Difference.append(int(row[1]))
 
     for i in range(len(Difference)-1): 
         DifferenceForMonth= (Difference[i+1] - Difference[i])
