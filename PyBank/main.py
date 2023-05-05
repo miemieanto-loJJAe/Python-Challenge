@@ -19,3 +19,4 @@ with open(budget_data) as csvfile:
 print(Total_Months)
 
 Total += int(row[1])
+print(Total)
