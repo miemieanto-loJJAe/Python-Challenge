@@ -8,8 +8,6 @@ import statistics
 #showing where the data is
 budget_data = os.path.join('Resources','budget_data.csv')
 
-Total_Months = 0
-
 # setting change as veriable so i can use it later
 change = []
 
@@ -21,8 +19,14 @@ with open(budget_data) as csvfile:
 
     csv_header = next(csvreader)
     
+    Total_Months = 0
     Total = 0
+
+    Total_Months = len(list(csvreader))
+
  
     for row in csvreader:
         Total += int(row[1])
     print(Total)
+
+  
