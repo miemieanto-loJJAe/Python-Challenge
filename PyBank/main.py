@@ -14,6 +14,4 @@ with open(budget_data) as csvfile:
     print(csvreader)
 #going to create a loop
 
-
-for row in csvreader:
     Total_Months += 1
