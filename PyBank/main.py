@@ -52,4 +52,4 @@ with open(budget_data) as csvfile:
     print(f"Greatest Increase in Profits: {Lowest_Month}, {Biggest_Increase}")
     print(f"Greatest Decrease in Profits: {Highest_Month}, {Biggest_Decrease}")
 
-
+file = open("Financial_Analysis.txt", "w")
