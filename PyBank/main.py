@@ -1,5 +1,6 @@
 import os
 import csv
+import statistics
 
 budget_data = os.path.join('Resources','budget_data.csv')
 
@@ -13,5 +14,6 @@ with open(budget_data) as csvfile:
 
     print(csvreader)
 #going to create a loop
-
-    Total_Months += 1
+    for row in csvreader:
+        Total_Months += 1
+print(Total_Months)
