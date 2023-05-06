@@ -23,7 +23,23 @@ with open(election_data) as csvfile:
     #start loop to find answers
     for row in csvreader:
         Total_Votes += 1
+        Candidate = row["Candidate"]
+        #finding unique candidates
+        if Candidate not in Election_candidates:
+            Election_candidates.append(Candidate)
+            Candidate_votes[Candidate] = 1
+        Candidate_votes[Candidate] = Candidate_votes[Candidate] + 1
+
+    for Candidate in Candidate_votes:
+        vote = Candidate_votes[Candidate]
+        percent_vote = float(votes)/float(Total_Votes)*100
+        if (vote > Vote_Count):
+            Vote_Count = vote
+            Election_winner= Candidate
+        Output = (f"{Candidate}: {percent_vote: .3f}% ({vote})/n")
+        print(Output)
         
-    
+
+
 
 
