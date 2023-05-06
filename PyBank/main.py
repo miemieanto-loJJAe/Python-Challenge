@@ -5,6 +5,8 @@ import statistics
 #csv path
 budget_data = os.path.join('Resources','budget_data.csv')
 
+txt_path = "Financial_Analysis.txt"
+
 #listing variables
 Total_Months = 0
 Total = 0
@@ -52,11 +54,11 @@ with open(budget_data) as csvfile:
     print(f"Greatest Increase in Profits: {Lowest_Month}, {Biggest_Increase}")
     print(f"Greatest Decrease in Profits: {Highest_Month}, {Biggest_Decrease}")
 
-file = open('Financial_Analysis.txt', 'w')
-file.write('Financial Analysis')
-file.write('__________________')
-file.write(f"Total Months: {Total_Months}")
-file.write(f"Total: ${Total}")
-file.write(f"Average Change: ${Average_Difference}")
-file.write(f"Greatest Increase in Profits: {Lowest_Month}, {Biggest_Increase}")
-file.write(f"Greatest Decrease in Profits: {Highest_Month}, {Biggest_Decrease}")
+with open(txt_path, 'w') as f:
+    f.write("Financial Analysis")
+    f.write("__________________")
+    f.write(f"Total Months: {Total_Months}")
+    f.write(f"Total: ${Total}")
+    f.write(f"Average Change: ${Average_Difference}")
+    f.write(f"Greatest Increase in Profits: {Lowest_Month}, {Biggest_Increase}")
+    f.write(f"Greatest Decrease in Profits: {Highest_Month}, {Biggest_Decrease}")
