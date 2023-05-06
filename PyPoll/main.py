@@ -39,7 +39,8 @@ with open(election_data) as csvfile:
         Output = (f"{Candidate}: {percent_vote: .3f}% ({vote})/n")
         print(Output)
         
-
+    Winner = (f"Winner: {Election_winner}")
+    print(Winner)
 
 
 
