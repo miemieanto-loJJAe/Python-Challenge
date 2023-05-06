@@ -42,5 +42,11 @@ with open(election_data) as csvfile:
     Winner = (f"Winner: {Election_winner}")
     print(Winner)
 
+with open (txt_path, 'w') as f:
+    f.write("Election Results")
+    f.write("__________________")
+    f.write(Output)
+    f.write(Winner)
+
 
 
