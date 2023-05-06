@@ -15,7 +15,7 @@ Vote_Count = 0
 Election_winner = ""
 
 #Open csv
-with open('election_data') as csvfile:
+with open(election_data) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
 
     header = next(csvreader)
@@ -23,7 +23,7 @@ with open('election_data') as csvfile:
     #start loop to find answers
     for row in csvreader:
         Total_Votes += 1
-    print(Total_Votes)
+        
     
 
 
