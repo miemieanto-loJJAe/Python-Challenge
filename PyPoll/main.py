@@ -30,6 +30,11 @@ with open(election_data) as csvfile:
             Candidate_votes[Candidate] = 1
         Candidate_votes[Candidate] = Candidate_votes[Candidate] + 1
 
+with open (txt_path, 'w') as f:
+    f.write("Election Results")
+    f.write("__________________")
+
+
     for Candidate in Candidate_votes:
         vote = Candidate_votes[Candidate]
         percent_vote = float(vote)/float(Total_Votes)*100
@@ -38,14 +43,10 @@ with open(election_data) as csvfile:
             Election_winner= Candidate
         Output = (f"{Candidate}: {percent_vote: .3f}% ({vote})/n")
         print(Output)
+        f.write(Output)
         
     Winner = (f"Winner: {Election_winner}")
     print(Winner)
-
-with open (txt_path, 'w') as f:
-    f.write("Election Results")
-    f.write("__________________")
-    f.write(Output)
     f.write(Winner)
 
 
